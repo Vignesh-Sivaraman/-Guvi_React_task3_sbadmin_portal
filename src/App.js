@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/sb-admin-2.css";
+import DashBoard from "./DashBoard";
+
+import Users from "./Users";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Products from "./Products";
+import CreateUser from "./CreateUser";
+import CreateProduct from "./CreateProduct";
+import Portal from "./Portal";
+import Login from "./Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/portal" element={<Portal />}>
+          <Route path="dashboard" element={<DashBoard />}></Route>
+          <Route path="users" element={<Users />}></Route>
+          <Route path="create-user" element={<CreateUser />}></Route>
+          <Route path="products" element={<Products />}></Route>
+          <Route path="create-product" element={<CreateProduct />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

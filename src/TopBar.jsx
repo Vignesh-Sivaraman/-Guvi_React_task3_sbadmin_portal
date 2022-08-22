@@ -287,6 +287,7 @@ function TopBar() {
             </a>
             <div className="dropdown-divider"></div>
             <a
+              onClick={logout}
               className="dropdown-item"
               href="#"
               data-toggle="modal"

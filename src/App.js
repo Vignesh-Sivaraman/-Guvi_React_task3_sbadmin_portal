@@ -1,5 +1,6 @@
 import "./css/sb-admin-2.css";
 import DashBoard from "./DashBoard";
+import "bootstrap/dist/js/bootstrap";
 
 import Users from "./Users";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

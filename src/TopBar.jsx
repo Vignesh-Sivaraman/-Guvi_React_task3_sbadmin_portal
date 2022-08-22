@@ -255,7 +255,7 @@ function TopBar() {
             href="#"
             id="userDropdown"
             role="button"
-            data-toggle="dropdown"
+            data-bs-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
           >
